@@ -30,8 +30,3 @@ Le Random Forest a été retenu pour sa meilleure performance prédictive.
 ## Technologies utilisées
 Python (pandas, numpy, scikit-learn), Google Colab
 
-## Pour aller plus loin
-- Tester d'autres modèles (Gradient Boosting, XGBoost)
-- Optimiser les hyperparamètres (GridSearch)
-- Construire une courbe ROC et une matrice de confusion visuelles
-- Traduire le modèle en score de crédit (échelle type 300-850) pour une lecture métier
