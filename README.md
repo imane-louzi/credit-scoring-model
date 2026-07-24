@@ -26,6 +26,11 @@ Dataset public "Give Me Some Credit" (Kaggle, 2011) :
 Le Random Forest a été retenu pour sa meilleure performance prédictive.
 
 **Variables les plus prédictives** : le taux d'utilisation du crédit renouvelable (27%) domine largement, suivi du ratio d'endettement, de l'âge et du revenu mensuel. L'historique de retards de paiement (30-59, 60-89, 90+ jours) représente collectivement environ 21% de l'importance — confirmant que le comportement de paiement passé est un des meilleurs prédicteurs du risque futur, davantage que les caractéristiques socio-démographiques (nombre de personnes à charge, prêts immobiliers).
+## Visualisations
+
+![Courbe ROC](roc_curve.png)
+
+![Matrice de confusion](confusion_matrix.png)
 
 ## Technologies utilisées
 Python (pandas, numpy, scikit-learn), Google Colab
