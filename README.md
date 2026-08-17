@@ -32,6 +32,16 @@ Le Random Forest a été retenu pour sa meilleure performance prédictive.
 
 ![Matrice de confusion](confusion_matrix.png)
 
+## Extension : recherche pilotée par agents
+
+En complément du run initial (AUC 0.83), ce projet inclut une extension qui structure la recherche de nouvelles features comme une boucle à trois agents plutôt qu'un unique run manuel :
+
+- **Agent Hypothèses** (LLM) : propose des features dérivées à tester.
+- **Agent Entraînement** (code) : construit chaque feature et mesure le gain d'AUC réel.
+- **Agent Critique** (LLM) : challenge chaque résultat sur trois critères — fuite de données, gain suspect vu le déséquilibre de classe, cohérence métier — avant de le valider.
+
+Sur 4 features testées, 3 ont été acceptées et 1 a été **rejetée** par l'agent critique (`severe_delinquency_flag`, gain d'AUC jugé trop marginal malgré une cohérence métier apparente). Détail complet dans [`research_log.md`](research_log.md).
+
 ## Technologies utilisées
 Python (pandas, numpy, scikit-learn), Google Colab
 
